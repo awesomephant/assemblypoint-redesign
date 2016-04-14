@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<header class="site-header">
+    <h1 class="page-title">
+        {{ site.title }}
+    </h1>
+</header>
+
+<section class="post-list">
+    {% for post in site.posts %}
+      <a class='post' href='{{ post.url }}'>
+                  <h2 class='post-title'>{{ post.title }}</h2>
+
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </a>
+    {% endfor %}
+</section>
