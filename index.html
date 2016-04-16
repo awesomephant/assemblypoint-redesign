@@ -10,7 +10,7 @@ layout: default
 
 <section class="post-list">
     {% for post in site.posts %}
-      <a class='post' href='{{ post.url }}'>
+      <a class='post' href='{{ post.link }}'>
                   <h2 class='post-title'>{{ post.title }}</h2>
 
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
