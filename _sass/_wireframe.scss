@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    font-size: 1.3rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+a {
+    color: lighten(black, 20);
+    text-decoration: underline;
+    font-size: inherit;
+}
+
+nav a {
+    margin-right: .2rem;
+}
+
+.studios {
+    
+}
+
+.studio {
+    display: inline-block;
+    border: 1px solid white;
+    padding-bottom: 1rem;
+    padding: 3rem 1rem;
+    min-width: 25%;
+}
+
+section, header, footer {
+    padding: 1rem 2%;
+    background: rgb(230,230,230);
+    border-bottom: 2px solid white;
+}
+
+.project-current {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+footer {
+    background: rgb(200,200,200)
+}
