@@ -23,7 +23,8 @@ body {
 }
 
 .post-list {
-    padding: 1.5rem;
+    @extend .card;
+    background: white;    
 }
 
 .page-title {
@@ -34,13 +35,16 @@ body {
 }
 
 .post {
-    @extend .card;
-    background: white;
-    display: inline-block;
+    display: block;
+    border-bottom: 1px solid $lightgray;
     padding: 1.2rem;
     list-style: none;
     color: $black;
     text-decoration: none;
+    
+    &:hover, &:focus {
+        background: lighten($lightgray, 7);
+    }
 }
 
 .post-meta {
