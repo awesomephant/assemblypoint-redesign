@@ -1,23 +1,5 @@
 $lightgray: rgb(240,240,240);
 $black: rgb(20,20,20);
-@font-face {
-    font-family: "Brown-Bold";
-    src:url("http://files.cargocollective.com/572292/lineto-brown-bold.eot");
-    src:url("http://files.cargocollective.com/572292/lineto-brown-bold.eot") format("embedded-opentype"),
-        url("http://files.cargocollective.com/572292/lineto-brown-bold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Brown-Boldalt";
-    src:url("http://files.cargocollective.com/572292/lineto-brown-reclinbold.eot");
-    src:url("http://files.cargocollective.com/572292/lineto-brown-reclinbold.eot") format("embedded-opentype"),
-        url("http://files.cargocollective.com/572292/lineto-brown-reclinbold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 * {
     margin: 0;
