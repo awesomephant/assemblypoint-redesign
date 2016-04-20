@@ -58,6 +58,24 @@ h1, h2 {
 
 .current-show {
     height: 80vh;
+    padding: 0 5%;
+    position: relative;
+}
+
+.current-show-details {
+    background: white;
+    padding: 1.5rem;
+    max-with: 25rem;
+    position: absolute;
+    bottom: 2rem;
+    
+    h3 {
+        color: gray;
+    }
+    
+    h2 {
+        margin-bottom: .5rem;
+    }
 }
 
 .site-header-home {
@@ -75,7 +93,7 @@ h1, h2 {
     }    
     ul {
      display: flex;
-     justify-content: space-between;
+     justify-content: stretch;
      list-style: none;   
     }
     
@@ -86,6 +104,8 @@ h1, h2 {
 
 .journal-feed-item {
     padding: 1rem;
+    margin-right: 1rem;
+    flex-basis: 25%;
     background: lightgray;
 }
 
