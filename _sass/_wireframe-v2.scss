@@ -78,8 +78,9 @@ h1, h2 {
     }
 }
 
-.site-header-home {
-    background: url('http://payload374.cargocollective.com/1/17/572292/9796478/Projects_Assembly_Point_9_WEB_900.png');
+.home .site-header-home {
+
+    background: url(' http://payload374.cargocollective.com/1/17/572292/9796478/Projects_Assembly_Point_9_WEB_900.png');
     background-size: cover;
     background-position: center;
 }
@@ -103,10 +104,18 @@ h1, h2 {
 }
 
 .journal-feed-item {
-    padding: 1rem;
     margin-right: 1rem;
     flex-basis: 25%;
     background: lightgray;
+    
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.journal-item-details {
+        padding: 1rem;
 }
 
 .show-list {
@@ -120,6 +129,19 @@ h1, h2 {
 .show-image {
     width: 100%;
     max-width: 800px;
+}
+
+.editions {
+    column-count: 2;
+}
+
+.edition {
+    display: inline-block;
+}
+
+.edition-image {
+    display: block;
+    width: 100%;
 }
 
 a {
