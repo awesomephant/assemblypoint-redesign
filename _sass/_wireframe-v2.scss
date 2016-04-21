@@ -164,3 +164,26 @@ footer {
         margin-bottom: 2rem;
     }
 }
+
+.slider {
+	padding: 1rem 5%;
+	padding-top: 5rem;
+	display: flex;
+	overflow-x: scroll;
+    .item {
+    	min-width: 30%;
+	    height: 10rem;
+    	margin-right: 1rem;
+	    background: #eee;
+    }
+
+    .label {
+	    position: relative;
+        height: 0;
+    	top: -2rem;
+    	&.stick {
+	    	position: absolute;
+	    	left: 2rem;
+	    }
+    }
+}

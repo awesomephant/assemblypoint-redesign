@@ -6,6 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assemblypoint-redesign/css/wireframe-v2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           var p = $('#first').position();
+           var first = p.left;
+           var prev = $('#previous').offset();
+
+$('#slider').scroll(function(){
+	var x = $(this).scrollLeft();
+	console.log(x);
+	
+	if ( x + 16 > first ) {
+		$('#previous').addClass('stick')
+		.css('top', prev.top)
+        .css('left', '5%');
+	} else {
+		$('#previous').removeClass('stick')
+		.css('top', '-2rem')
+        .css('left', '0');
+	}
+})
+})
+    </script>
 </head>
 
 <body class='home'>
@@ -28,6 +51,30 @@
             </div>
         </section>
     </header>
+    <div class="slider" id='slider'>
+        <div class="item">
+            <h2 class="label">Current Show</h2>
+            <p>Show Title and Description</p>
+        </div>
+        <div class="item">
+            <h2 class='label' id='previous'>Previous Shows</h2>
+            <p id='first'>Show Title and Description</p>
+        </div>
+        <div class="item">
+            <p>Show Title and Description</p>
+        </div>
+        <div class="item">
+            <p>Show Title and Description</p>
+        </div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, doloremque ipsum corporis blanditiis accusantium
+                iusto aliquid impedit. Architecto, perspiciatis, vel.</p>
+        </div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, doloremque ipsum corporis blanditiis accusantium
+                iusto aliquid impedit. Architecto, perspiciatis, vel.</p>
+        </div>
+    </div>
     <section class="journal-feed">
         <h1>Journal Feed</h1>
         <ul>
