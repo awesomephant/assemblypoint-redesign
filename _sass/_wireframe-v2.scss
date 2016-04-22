@@ -1,6 +1,16 @@
 $lightgray: rgb(240,240,240);
 $black: rgb(20,20,20);
-
+@mixin bp($point) {
+  @if $point == l {
+    @media (min-width: 65rem) { @content; }
+  }
+  @else if $point == m {
+    @media (min-width: 45rem) { @content; }
+  }
+  @else if $point == s {
+    @media (min-width: 35rem)  { @content; }
+  }
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,20 +19,85 @@ $black: rgb(20,20,20);
 
 body {
     font-family: Brown-Bold, sans-serif;
+    background: $lightgray;
 }
 
-h1, h2 {
+.card-list-horizontal {
+    display: flex;
+    flex-direction: column;
+    @include bp(s){
+        padding: 1rem 5%;
+    }
+    @include bp(m){
+        flex-direction: row;
+        .card {
+            flex-basis: 20%;
+            flex-direction: column;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column; 
+    @include bp(m){
+        padding: 2rem 5%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .card {
+            align-items: flex-start;
+            flex-basis: 80%;
+            margin-right: 1rem;
+        }
+        .card-image {
+            width: 60%;
+            height: auto;
+        }
+    }
+    .card {
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+}
+
+.card {
+    background: white;
+    @include bp(m){
+        display: flex;        
+    }
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-subtitle {
+    color: gray;
+}
+
+.card-title {
     font-size: 1.3rem;
+    margin-bottom: .75rem;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
 }
 
 .sticky {
     padding: 0 5%;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1px solid $black;
+    flex-direction: column;
+    @include bp(m){
+        flex-direction: row;
+    }
 }
 
 .site-title {
@@ -45,86 +120,22 @@ h1, h2 {
 }
 
 .current-show-details {
-    background: white;
-    padding: 1.5rem;
-    max-with: 25rem;
+    max-width: 25rem;
     position: absolute;
     bottom: 2rem;
-    
-    h3 {
-        color: gray;
-    }
-    
-    h2 {
-        margin-bottom: .5rem;
-    }
 }
 
 .home .site-header-home {
-
     background: url(' http://payload374.cargocollective.com/1/17/572292/9796478/Projects_Assembly_Point_9_WEB_900.png');
     background-size: cover;
     background-position: center;
 }
 
 .journal-feed {
-    padding: 2rem 5%;
     margin-bottom: 2rem;
     background: $lightgray;
-    h1 {
-        margin-bottom: 1rem;
-    }    
-    ul {
-     display: flex;
-     justify-content: stretch;
-     list-style: none;   
-    }
-    
-    li {
-        background: white;
-    }
 }
 
-.journal-feed-item {
-    margin-right: 1rem;
-    flex-basis: 25%;
-    background: lightgray;
-    
-    img {
-        width: 100%;
-        display: block;
-    }
-}
-
-.journal-item-details {
-        padding: 1rem;
-}
-
-.show-list {
-    padding: 0 5%;
-}
-
-.show {
-    margin-bottom: 2rem;
-}
-
-.show-image {
-    width: 100%;
-    max-width: 800px;
-}
-
-.editions {
-    column-count: 2;
-}
-
-.edition {
-    display: inline-block;
-}
-
-.edition-image {
-    display: block;
-    width: 100%;
-}
 
 a {
     color: lighten(black, 20);
@@ -137,15 +148,15 @@ nav a {
 }
 
 
-.studio {
-    display: inline-block;
-    border: 1px solid white;
-    padding-bottom: 1rem;
-    padding: 3rem 1rem;
-    min-width: 25%;
+
+.page-header {
+    padding: 2rem 5%;
 }
 
-section, header, footer {
+.page-title {
+    font-size: 2rem;
+    line-height: 1.55;
+    font-weight: normal;
 }
 
 .project-current {

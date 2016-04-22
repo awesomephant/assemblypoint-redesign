@@ -44,81 +44,66 @@ $('#slider').scroll(function(){
             </nav>
         </div>
         <section class="current-show">
-            <div class="current-show-details">
-                <h3>Upcoming Show:</h3>
-                <h2 class='current-show-title'><a href="project.html">Upcoming Show Title</a></h2>
-                <date class="current-show-date">03 May 2016 - 01 June 2016</date>
+            <div class="card current-show-details">
+                <div class="card-content">
+                    <h3 class='card-subtitle'>Upcoming Show:</h3>
+                    <h2 class='card-title'><a href="project.html">Upcoming Show Title</a></h2>
+                    <date class="current-show-date">03 May 2016 - 01 June 2016</date>
+                </div>
             </div>
         </section>
     </header>
-    <div class="slider" id='slider'>
-        <div class="item">
-            <h2 class="label">Current Show</h2>
-            <p>Show Title and Description</p>
-        </div>
-        <div class="item">
-            <h2 class='label' id='previous'>Previous Shows</h2>
-            <p id='first'>Show Title and Description</p>
-        </div>
-        <div class="item">
-            <p>Show Title and Description</p>
-        </div>
-        <div class="item">
-            <p>Show Title and Description</p>
-        </div>
-        <div class="item">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, doloremque ipsum corporis blanditiis accusantium
-                iusto aliquid impedit. Architecto, perspiciatis, vel.</p>
-        </div>
-        <div class="item">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, doloremque ipsum corporis blanditiis accusantium
-                iusto aliquid impedit. Architecto, perspiciatis, vel.</p>
-        </div>
-    </div>
     <section class="journal-feed">
         <h1>Journal Feed</h1>
-        <ul>
-            <li class="journal-feed-item">
-                <img src="./assets/insta.jpg" alt="">
-                <div class="journal-item-details">
-                    <h2>Journal Feed Item</h2>
+        <ul class='card-list-horizontal'>
+            <li class="journal-feed-item card">
+                <img class='card-image' src="./assets/insta.jpg" alt="">
+                <div class="card-content">
+                    <h2 class='card-title'>Journal Feed Item</h2>
                     <p>Journal entry excerpt</p>
                 </div>
             </li>
-            <li class="journal-feed-item">
-                <img src="./assets/insta.jpg" alt="">
-                <div class="journal-item-details">
-                    <h2>Journal Feed Item</h2>
+            <li class="journal-feed-item card">
+                <img class='card-image' src="./assets/insta.jpg" alt="">
+                <div class="card-content">
+                    <h2 class='card-title'>Journal Feed Item</h2>
                     <p>Journal entry excerpt</p>
                 </div>
             </li>
-            <li class="journal-feed-item">
-                <img src="./assets/insta.jpg" alt="">
-                <div class="journal-item-details">
-                    <h2>Journal Feed Item</h2>
+            <li class="journal-feed-item card">
+                <img class='card-image' src="./assets/insta.jpg" alt="">
+                <div class="card-content">
+                    <h2 class='card-title'>Journal Feed Item</h2>
                     <p>Journal entry excerpt</p>
                 </div>
             </li>
-            <li class="journal-feed-item">
-                <img src="./assets/insta.jpg" alt="">
-                <div class="journal-item-details">
-                    <h2>Journal Feed Item</h2>
+            <li class="journal-feed-item card">
+                <img class='card-image' src="./assets/insta.jpg" alt="">
+                <div class="card-content">
+                    <h2 class='card-title'>Journal Feed Item</h2>
                     <p>Journal entry excerpt</p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card-content">
+                    <a href="journal.html" class="btn">View All</a>
                 </div>
             </li>
         </ul>
     </section>
     <section class="show-list">
         <h1>Previous Shows</h1>
-        <div class="show">
-            <img src="http://payload374.cargocollective.com/1/17/572292/9796478/video_smaller_final.gif" alt="" class="show-image">
-            <h2>Show Title</h2>
-            <p>Show Description</p>
+        <div class="card">
+            <div class="card-content">
+                <h2>Show Title</h2>
+                <p>Show Description</p>
+            </div>
         </div>
-        <div class="show">
-            <img src="http://payload374.cargocollective.com/1/17/572292/9796478/TABLEAUX-moving-id-900px-fast.gif" alt="" class="show-image">
-            <h2>Show Title</h2>
-            <p>Show Description</p>
+        <div class="card">
+            <div class="card-content">
+                <h2>Show Title</h2>
+                <p>Show Description</p>
+            </div>
         </div>
     </section>
     <footer>
